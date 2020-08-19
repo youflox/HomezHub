@@ -1,0 +1,28 @@
+.header{
+    z-index : 100;
+    background: #8d275a;
+    top :0;
+    left :0;
+    height: 50px;
+    width : 100vw;
+    border-radius : 5px;
+    display : flex;
+    flex-direction : row;
+    justify-content : center ;
+    color : white;
+}
+
+.header h6{
+    margin : 20px;
+    font : 20px Arial, sans-serif;
+    cursor : pointer;
+
+}
+
+.header h2{
+    position : absolute;
+    top : 0%;
+    left : 10%;
+    font-family : sans-serif;
+    cursor : default;
+}

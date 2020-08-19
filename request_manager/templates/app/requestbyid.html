@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+
+{% block title%} Request {{data.id}}{%endblock%}
+
+
+{% block head%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/requestbyid.css' %}">
+{% endblock head%}
+
+
+{%block body%}
+<h2 class="requestid">Request ID : {{data.id}}</h2>
+
+<div class="main">
+
+    <table class="requestbyid">
+
+        <tr>
+            <td class="table_header"> Request Type :</td>
+            <td>{{data.type}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Request Desc :</td>
+            <td>{{data.description}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> City :</td>
+            <td>{{data.city}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> State :</td>
+            <td>{{data.state}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Pin Code :</td>
+            <td>{{data.pin}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Alternate Phone N.o :</td>
+            <td>{{data.phone}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Status :</td>
+            <td>{{data.status}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Remarks :</td>
+            <td>{{data.remarks}}</td>
+        </tr>
+        <tr>
+            <td class="table_header"> Updated By :</td>
+            <td>{{data.updated}}</td>
+        </tr>
+
+    </table>
+
+    <button class="btnback">Back</button>
+
+</div>
+
+<script>
+    document.querySelector('.btnback').addEventListener('click', ()=>{
+        window.location  = `${window.origin}/home`
+        console.log('Hello')
+
+    })
+</script>
+{%endblock%}

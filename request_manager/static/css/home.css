@@ -1,0 +1,62 @@
+.mainlist{
+    position : absolute;
+    height : 80vh;
+    width : 100vw;
+    padding: 0;
+    margin :0;
+}
+
+table{
+    position : absolute;
+    width : 50vw;
+    height: 95%;
+    display: block;
+    overflow-y:auto;
+    margin :0;
+    padding: 0;
+    top : 5%;
+    left:50%;
+    transform : translate(-50%, 0%)
+}
+
+table th{
+    background : #4472c4;
+    height : 40px;
+    font : 20px Arial, sans-serif;
+    color : white;
+        max-width : 500px;
+
+}
+table td{
+    height: 40px;
+    font : 20px Arial, sans-serif;
+    padding : 5px;
+    align-items: left;
+    color : black;
+}
+
+.desc{
+    max-width : 500px;
+}
+
+table tr{
+        background :#cfd5e9;
+}
+
+table tr:nth-of-type(even){
+        background :#e8ebf4;
+}
+
+
+#requestbtn{
+    position : absolute;
+    top : 55rem;
+    left : 50%;
+    transform : translate(-50%, -30%);
+    height : 50px;
+    width : 200px;
+    font : 20px Arial, sans-serif;
+    border-radius : 30px;
+    outline :none;
+    background : #4472c4
+}

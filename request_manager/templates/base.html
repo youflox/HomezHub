@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{%block title%}
+        {% endblock title%}</title>
+
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+    {% block head %}
+
+    {% endblock head%}
+</head>
+
+<body>
+<div class="header">
+    {%if user.username %}
+        <h2>Welcome : {{user.username | title}}</h2>
+        <h6 id="#">Home</h6>
+        <h6 id="home/requests">New Request</h6>
+        <h6 id="logout">Logout</h6>
+    {% else %}
+        <h6 id="login">Login</h6>
+        <h6 id="signup">Signup</h6>
+    {% endif %}
+</div>
+
+{% block body%}
+{% endblock body%}
+
+<div id="footer"></div>
+<script src="{% static 'js/base.js'%}"></script>
+</body>
+</html>

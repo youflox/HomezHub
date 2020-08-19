@@ -1,0 +1,47 @@
+.main{
+    position : relative;
+    height : 85vh;
+    width : 100vw;
+    top :0%;
+    left : 50%;
+    transform : translate(-50%, 0%)
+}
+
+.requestbyid{
+    position : absolute;
+    height : 75vh;
+    width : 75vw;
+
+}
+
+table td{
+    max-width : 100px;
+    padding : 0px 20px 0px 50px  ;
+    font : 20px Arial, sans-serif;
+
+}
+
+.table_header{
+    text-align : right;
+}
+
+.btnback{
+    position : absolute;
+    top : 52rem;
+    left : 50%;
+    transform : translate(-50%, -90%);
+
+    height : 50px;
+    width : 200px;
+    font : 20px Arial, sans-serif;
+    border-radius : 30px;
+    outline :none;
+    background : #4472c4
+
+}
+
+.requestid{
+    text-align : center;
+      font-size: 30px;
+
+}

@@ -1,0 +1,49 @@
+table td{
+    padding : 30px 5px 5px 5px;
+}
+
+table input{
+    height : 50px;
+}
+.main{
+    position : absolute;
+    left : 50%;
+    top : 20%;
+    transform : translate(-49%, -20%)
+}
+
+table td{
+    font : 20px Arial, sans-serif;
+}
+
+input:not(.type){
+    width : 300px;
+    font : 20px Arial, sans-serif;
+    wrap : soft;
+
+}
+
+.submit{
+    position : absolute;
+    top : 40rem;
+    left : 50%;
+    transform : translate(-10%, 50%);
+    height : 50px;
+    width : 200px;
+    font : 20px Arial, sans-serif;
+    border-radius : 30px;
+    outline :none;
+    background : #4472c4
+}
+
+.message{
+    text-align : center;
+    font : 20px Arial, sans-serif;
+    padding : 10px 0px 0px 0px;
+    margin:0;
+    color : green;
+}
+
+.reqtype input{
+    height : 10px;
+}

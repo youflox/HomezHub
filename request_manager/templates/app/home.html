@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{%block title%} Home {%endblock title%}
+
+
+{% block head%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock head%}
+
+{% block body%}
+<div class="mainlist">
+    <table>
+        <tr>
+            <th>Request Id</th>
+            <th>Request Type</th>
+            <th>Request Desc</th>
+            <th>Request Date</th>
+            <th>Status</th>
+        </tr>
+        {% for list in data%}
+        <tr>
+            <td id={{list.id}} style="cursor:pointer; color:coral; text-align: center; text-decoration: underline;">{{list.id}}</td>
+            <td>{{list.type}}</td>
+            <td class="desc">{{list.description}}</td>
+            <td>{{list.date}}</td>
+            <td>{{list.status}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    <button id="requestbtn">New Request</button>
+</div>
+
+
+<script src="{%static 'js/home.js' %}"></script>
+{% endblock body%}

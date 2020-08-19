@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{%block title%} singup {%endblock title%}
+
+
+{% block head%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/signup.css'%}">
+{%endblock head%}
+
+
+{%block body%}
+    <div class="main">
+        <h2>SignUp</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Submit</button>
+        </form>
+        <label class="login">Already a member? <button>Login</button></label>
+    </div>
+
+<script>
+    document.querySelector('.login').addEventListener('click',()=>{
+        window.location = `${window.origin}/login`
+    })
+
+    document.getElementById('id_username').placeholder = 'username'
+    document.getElementById('id_password1').placeholder = 'password'
+    document.getElementById('id_password2').placeholder = 'confirm password'
+
+</script>
+
+{%endblock body%}

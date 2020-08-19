@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{%block title%} Login {%endblock title%}
+
+{% block head %}
+
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock head%}
+
+{% block body%}
+
+<h3>{{ message }}</h3>
+
+<form method = 'POST'>
+    {% csrf_token%}
+    <div id="form_login">
+        <h2> Login </h2>
+        <input required type="username" name="login_username" id="login_username" placeholder="username" autofocus>
+        <input required type="password" id='login_password' placeholder="password" name="login_password">
+        <input type="submit" id="login_submit">
+    </div>
+</form>
+<div id="login_forgot">
+    <button id="login_forgot_password">Forgot password</button>
+    <button id="login_signup"> <a href="/signup">Sign up</a></button>
+</div>
+
+
+<script src="{% static  'js/login.js' %}"></script>
+{% endblock body %}
+

@@ -1,0 +1,38 @@
+#form_login{
+    position : absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display : flex;
+    flex-flow : column;
+}
+
+h2{
+    font: 35px auto, sans-serif;
+    padding-left : 120px;
+    margin : 5px;
+}
+
+#login_username, #login_password, #login_submit{
+    padding : 10px;
+    margin : 5px;
+    width : 300px;
+    border-radius : 10px;
+    font: 20px Arial, sans-serif;
+    outline-color : #d94c93;
+
+}
+#login_submit{
+    width : 324px !important;
+}
+
+#login_forgot{
+    position : absolute;
+    top: 50% ;
+    left : 49%;
+    transform: translate(-50%, -50%);
+}
+#login_signup, #login_forgot_password{
+    margin:10px;
+    height : 30px
+}

@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+
+{%block title%} New Request {%endblock title%}
+
+{% block head%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'css/request.css' %}">
+{%endblock head%}
+
+{% block body%}
+
+
+{% if message%}
+<h6 class="message">{{message}}</h6>
+{% endif%}
+
+<div class="main">
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Request Type</td>
+                <td class="reqtype">
+                    <label> <input class="type" name="check" value="Plumbing" type="checkbox"> Plumbing </label>
+                    <label> <input class="type" name="check" value="Electrical" type="checkbox"> Electrical </label>
+                    <label> <input class="type" name="check" value="painting" type="checkbox"> painting </label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Request Desc</td>
+                <td><input name='desc' type="text" required></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input name='city' type="text" required></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input name='state' type="text" required></td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input name='pin' type="number" required></td>
+            </tr>
+            <tr>
+                <td>Alternate Phone</td>
+                <td>+<input name='country' type="number" style="width:80px; height: 40px;">
+                    <input required name='number'type="number"
+                           style="width:200px; height: 40px;">
+                </td>
+            </tr>
+        </table>
+        <button class="submit" >Submit</button>
+    </form>
+
+</div>
+
+<script>
+
+    document.querySelector('.reqtype').addEventListener('click', (e)=>{
+          console.dir(e.target.defaultValue)
+          document.getElementsByName('submit').disabled
+    })
+
+</script>
+{% endblock%}
