@@ -32,12 +32,14 @@ def user_signup(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         print('In')
+        print(form.is_valid())
         if form.is_valid():
-            print('Valid')
             form.save()
             return redirect('login')
         else:
-            return render(request, 'accounts/user_signup.html', {'message' : 'Somthing went wrong!!'})
+            print('Wrong')
+            context = {'form': form, 'message' : 'Password not strong!!'}
+            return render(request, 'accounts/user_signup.html', context)
 
     if request.method == 'GET':
         context = {'form' : form}
